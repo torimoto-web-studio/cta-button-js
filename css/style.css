@@ -1,0 +1,100 @@
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: grey;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.btn-container {
+  background-color: #ffffff;
+  width: 350px;
+  height: 200px;
+  top: 20px;
+  left: 20px;
+  display: flex;
+
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  flex-direction: column;
+}
+
+.cta-btn {
+  padding: 5px 20px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  box-shadow: 0 3px 3px rgb(41, 41, 2);
+  background-color: rgb(255, 216, 20);
+  cursor: pointer;
+  width: 90%;
+  margin-top: 80px;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.cta-btn:hover {
+  background-color: rgb(220, 190, 20);
+}
+
+.reset-btn {
+  padding: 5px 20px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #ddd;
+  color: #333;
+  cursor: pointer;
+  width: 90%;
+  margin-top: 10px;
+  box-shadow: 0 3px 3px rgb(41, 41, 2);
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.body-active {
+  background-image: url("../img/ushi-santa.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  transition: all 0.5s;
+  background-color: #ffffff;
+}
+
+.message-style {
+  position: absolute;
+
+  font-size: 18px;
+  font-weight: 900;
+  color: #4caf50;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+  opacity: 0;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.cta-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 1px rgb(41, 41, 2);
+}
+
+.reset-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 2px rgb(41, 41, 2);
+}
